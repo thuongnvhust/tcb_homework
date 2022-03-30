@@ -1,0 +1,1 @@
+POOLS_PATH = "resource/pools.json"

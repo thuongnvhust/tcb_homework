@@ -1,6 +1,7 @@
 import json
 
-POOLS_PATH = "resource/pools.json"
+from common import config
+
 
 def load_pools() -> dict:
     '''
@@ -10,7 +11,7 @@ def load_pools() -> dict:
             Specifies pools
     '''
     try:
-        with open(POOLS_PATH, 'r') as json_file:
+        with open(config.POOLS_PATH, 'r') as json_file:
             pools = json.load(json_file)
     except Exception:
         return {}
@@ -25,7 +26,7 @@ def save_pools(pools=dict) -> Exception:
             Specifies pools
     '''
     try:
-        with open(POOLS_PATH, "w") as write_file:
+        with open(config.POOLS_PATH, "w") as write_file:
             json.dump(pools, write_file, indent=4)
     except Exception as ex:
         return ex

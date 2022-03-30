@@ -9,7 +9,7 @@ class TestingValidation(unittest.TestCase):
            "poolValues": [1, 7, 2, 6]
         }
         input_true_ex = validation.validate_new_pool(pool=input_true)
-        self.assertIsInstance(input_true_ex, Exception)
+        self.assertIsNone(input_true_ex)
 
         input_false = {
            "poolId": 123546,

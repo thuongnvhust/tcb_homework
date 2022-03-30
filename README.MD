@@ -1,8 +1,11 @@
 
 
+## Calculate percentile
+In case of number of elements less than 100, I calculate percentile by sorting array (merge-sort) then use percentile rank.
 
+Otherwise, if number of elements equal or more than 100, I use numpy - a well-known library for scientific computing.
 
-### Storage
+## Storage
 Save pool in a file on disk (resource/pools.json) with format like below
 ```
 {
@@ -20,3 +23,11 @@ Save pool in a file on disk (resource/pools.json) with format like below
     ]
 }
 ```
+
+## Run
+
+Install requirements
+> pip install -r requirements.txt
+
+Run webservice in port 8080
+> python main.py --port 8080 --debug False

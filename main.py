@@ -13,7 +13,6 @@ pools = resiliency.load_pools()
 def receive():
     '''
         Returns the response of append/insert a new pool
-
     '''
     # Parse data
     data = request.data
@@ -55,8 +54,7 @@ def receive():
 @app.route("/query", methods=['POST'])
 def query():
     '''
-        Returns the response of append/insert a new pool
-
+        Returns the percentile and number of elements of given poolID
     '''
     # Parse data
     data = request.data

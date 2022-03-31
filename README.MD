@@ -1,4 +1,10 @@
 
+# Documentation
+
+## Testing
+Import this link to postman to test APIs:
+
+> https://www.getpostman.com/collections/66f5918a13a121632c56
 
 ## Calculate percentile
 In case of number of elements less than 100, I calculate percentile by sorting array (merge-sort) then use percentile rank.
